@@ -1,0 +1,25 @@
+{
+  "name": "nc-node-sleep",
+  "version": "1.0.0",
+  "description": "Testing if Name Cheap Node.js application sleeps under traffic inactivity (Phusion Passenger)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/garytou2/nc-node-sleep.git"
+  },
+  "author": "Gary Tou <garytou2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/garytou2/nc-node-sleep/issues"
+  },
+  "homepage": "https://github.com/garytou2/nc-node-sleep#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "node-cron": "^2.0.3"
+  }
+}
