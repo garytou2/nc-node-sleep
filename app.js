@@ -6,7 +6,7 @@ app.set("view engine", "ejs");
 app.use(bodyParser.json());
 
 app.get("/", function (req, res) {
-	console.log("\nHOME\n");
+	console.log("\nHOME: " + new Date().toLocaleString() + "\n");
 	res.render("home");
 });
 
