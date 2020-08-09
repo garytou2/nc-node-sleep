@@ -8,11 +8,11 @@ I have noticed that my Node.js application (hosted on Namecheap) shuts down afte
 
 They were not able to reproduce the problem.
 
-## This Node.js server does the following:
+## This Node.js application does the following:
 
 - `console.log("=== STARTING APP ===")` when the application starts
 - Every 30 seconds, `console.log()` the current time. This uses [`node-cron`](https://www.npmjs.com/package/node-cron) ("0,30 \* \* \* \* \*").
-- Responds with "`<h1>Home</h1>`" when you `GET` `"/"` on port 80 and `console.log()` "HOME" and the current time.
+- When you `GET` `"/"` on port 80, it responds with "`<h1>Home</h1>`" and `console.log()` "HOME" with the current time.
 
 ## The results
 
