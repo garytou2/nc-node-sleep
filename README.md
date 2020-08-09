@@ -1,10 +1,10 @@
 # nc-node-sleep
 
-This Node.js application tests if Namecheap's Node.js application (created through cPanel) sleeps under traffic inactivity.
+This Node.js application tests if Namecheap's Node.js application (created through cPanel shared hosting) sleeps under traffic inactivity.
 
 ## The problem
 
-I have noticed that my Node.js application (hosted on Namecheap) shuts down after a period of inactivity (no web traffic). According to Namecheap support, this should not be the case. Node.js application hosted on Namecheap should be running 24/7 and should not shutdown under inactivity.
+I have noticed that my Node.js application (hosted on Namecheap) shuts down after a period of inactivity (no web traffic). According to Namecheap support, **this should not be the case**. Node.js application hosted on Namecheap should be running 24/7 and **should not shutdown under inactivity**.
 
 They were not able to reproduce the problem.
 
@@ -155,6 +155,9 @@ I believe this might have something to do with Phusion Passenger's config [`Pass
 3. Create Node.js application through cPanel. Choose a location for the Passenger log file. This is how you will view the messages from `console.log()` and identify if the application is running or not.
 4. Let the application run. Check back on the log file later or `tail -f <file_path>`. The application may stop in 5 minutes or it may take long. I believe this depends on how busy the server is.
 
----
+# The solution
 
-Previous chat ID: `OHU-912-18097`
+After another chat with Namecheap support, their technicians concluded that this as expect of. In order to customize Phusion Passenger or prevent your application for shutting down, you can:
+
+- upgrade to VPS/dedicated
+- Self ping your application to create traffic.
